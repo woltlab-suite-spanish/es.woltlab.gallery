@@ -553,7 +553,7 @@
 		<item name="wcf.acp.option.gallery_video_links"><![CDATA[Habilitar los enlaces de vídeos]]></item>
 		<item name="wcf.acp.option.gallery_video_links.description"><![CDATA[Además de habilitar esta opción, también tienes que habilitar las plataformas de vídeo de abajo desde las que quieres que los usuarios enlacen vídeos.]]></item>
 		<item name="wcf.acp.option.category.gallery.video.link.provider"><![CDATA[Plataformas de vídeo]]></item>
-		<item name="wcf.acp.option.category.gallery.video.link.provider.description"><![CDATA[Para que las miniaturas de vídeo y los datos de vídeo se obtengan automáticamente al crear un enlace de vídeo, tienes que crear claves para algunas plataformas de vídeo.]]></item>
+		<item name="wcf.acp.option.category.gallery.video.link.provider.description"><![CDATA[Para que las miniaturas y los datos de los vídeos obtengan automáticamente al crear un enlace de vídeo, tienes que crear claves para algunas plataformas de vídeo.]]></item>
 		<item name="wcf.acp.option.gallery_video_link_providers"><![CDATA[Plataformas de vídeo permitidas]]></item>
 		<item name="wcf.acp.option.gallery_video_link_providers.description"><![CDATA[Los usuarios podrán enlazar vídeos de las plataformas seleccionadas.]]></item>
 		<item name="wcf.acp.option.gallery_youtube_api_key"><![CDATA[YouTube API Key]]></item>
