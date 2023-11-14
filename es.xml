@@ -302,8 +302,8 @@
 		<item name="gallery.image.conditions"><![CDATA[Imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/Vídeo{/if}]]></item>
 		<item name="gallery.image.condition.category"><![CDATA[Categoría]]></item>
 		<item name="gallery.image.condition.category.description"><![CDATA[Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} tienen que estar en cualquiera de las categorías seleccionadas. Se pueden seleccionar varias categorías manteniendo pulsada las tecla “Ctrl/Shift” (Windows) o Comando (Mac OS) y haciendo clic en las categorías deseadas.]]></item>
-		<item name="gallery.image.condition.timeFrame"><![CDATA[Edad]]></item>
-		<item name="gallery.image.condition.timeFrame.description"><![CDATA[Esta opción establece la edad mínima y máxima en días de las imágenes mostradas en la caja.]]></item>
+		<item name="gallery.image.condition.timeFrame"><![CDATA[Antigüedad]]></item>
+		<item name="gallery.image.condition.timeFrame.description"><![CDATA[Esta opción establece la antigüedad mínima y máxima en días de las imágenes mostradas en la caja.]]></item>
 		<item name="gallery.image.condition.displayMode"><![CDATA[Modo de visualización]]></item>
 		<item name="gallery.image.condition.displayMode.grid"><![CDATA[Cuadrícula]]></item>
 		<item name="gallery.image.condition.displayMode.motion"><![CDATA[Imágenes en movimiento]]></item>
