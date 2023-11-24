@@ -116,7 +116,9 @@
 		<item name="gallery.image.isDeleted"><![CDATA[Eliminada]]></item>
 		<item name="gallery.image.isDisabled"><![CDATA[Desactivada]]></item>
 		<item name="gallery.image.map"><![CDATA[Ubicación]]></item>
-		<item name="gallery.image.moderation.info"><![CDATA[Newly {if !$__wcf->session->getPermission('user.gallery.canAddImageWithoutModeration')}uploaded images{if GALLERY_VIDEO_UPLOAD && $__wcf->session->getPermission('user.gallery.canUploadVideo') && !$__wcf->session->getPermission('user.gallery.canUploadVideoWithoutModeration')} and videos{/if}{elseif $__gallery->canUploadVideo() && !$__wcf->session->getPermission('user.gallery.canUploadVideoWithoutModeration')}uploaded videos{/if}{if $__gallery->canLinkVideo() && !$__wcf->session->getPermission('user.gallery.canLinkVideoWithoutModeration')}{if !$__wcf->session->getPermission('user.gallery.canAddImageWithoutModeration') || (GALLERY_VIDEO_UPLOAD && $__wcf->session->getPermission('user.gallery.canUploadVideo') && !$__wcf->session->getPermission('user.gallery.canUploadVideoWithoutModeration'))} and {/if}added video links{/if} will remain inaccessible until approved by a moderator. Until their approval, you can neither view nor edit the {if !$__wcf->session->getPermission('user.gallery.canAddImageWithoutModeration')}images{/if}{if (GALLERY_VIDEO_UPLOAD && $__wcf->session->getPermission('user.gallery.canUploadVideo') && !$__wcf->session->getPermission('user.gallery.canUploadVideoWithoutModeration')) || (GALLERY_VIDEO_LINKS && $__wcf->session->getPermission('user.gallery.canLinkVideo') && !$__wcf->session->getPermission('user.gallery.canLinkVideoWithoutModeration'))}{if !$__wcf->session->getPermission('user.gallery.canAddImageWithoutModeration')} and {/if}videos{/if}.]]></item>
+		<item name="gallery.image.moderation.info.image"><![CDATA[Las imágenes recién subidas permanecerán inaccesibles hasta que sean aprobadas por un moderador. Hasta su aprobación, no podrás ver ni editar las imágenes.]]></item>
+		<item name="gallery.image.moderation.info.video"><![CDATA[Los vídeos recién subidos permanecerán inaccesibles hasta que sean aprobados por un moderador. Hasta su aprobación, no podrás ver ni editar los vídeos.]]></item>
+		<item name="gallery.image.moderation.info.videoLink"><![CDATA[Los nuevos enlaces de vídeo recién añadidos permanecerán inaccesibles hasta que sean aprobados por un moderador. Hasta su aprobación, no podrás ver ni editar los enlaces de vídeo.]]></item>
 		<item name="gallery.image.moveToAlbum"><![CDATA[Mover imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} al álbum]]></item>
 		<item name="gallery.image.noImages"><![CDATA[No hay imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}{if $category|isset} en esta categoría{/if} en este momento.{if $hasActiveFilter} <a href="{link application='gallery' controller=$controllerName object=$controllerObject}{/link}">Reset the applied filters.</a>{/if}]]></item>
 		<item name="gallery.image.pendingImages"><![CDATA[{if $pendingImageList|count > 1}Hay {#$pendingImageList|count} {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}imágenes o vídeos subidos{else}imágenes subidas{/if} pendientes que aun no se han guardado{else}Hay {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}una imagen o vídeo subido{else}una imagen subida{/if} pendiente que aun no se ha guardado.{/if}]]></item>
@@ -177,9 +179,9 @@
 		<item name="gallery.image.upload.restriction.maximumFilesize"><![CDATA[Tamaño máximo de archivo]]></item>
 		<item name="gallery.image.upload.restriction.maximumFilesize.value"><![CDATA[{@$__wcf->session->getPermission('user.gallery.maxSize')|filesize}]]></item>
 		<item name="gallery.image.upload.restriction.minimumImageSize"><![CDATA[Tamaño mínimo de imagen]]></item>
-		<item name="gallery.image.upload.restriction.minimumImageSize.value"><![CDATA[{#GALLERY_IMAGE_MIN_WIDTH}&times;{#GALLERY_IMAGE_MIN_HEIGHT} píxeles]]></item>
+		<item name="gallery.image.upload.restriction.minimumImageSize.value"><![CDATA[{#GALLERY_IMAGE_MIN_WIDTH} × {#GALLERY_IMAGE_MIN_HEIGHT} píxeles]]></item>
 		<item name="gallery.image.upload.restriction.maximumImageSize"><![CDATA[Tamaño máximo de imagen]]></item>
-		<item name="gallery.image.upload.restriction.maximumImageSize.value"><![CDATA[{#$__wcf->session->getPermission('user.gallery.maxWidth')}&times;{#$__wcf->session->getPermission('user.gallery.maxHeight')} píxeles]]></item>
+		<item name="gallery.image.upload.restriction.maximumImageSize.value"><![CDATA[{#$__wcf->session->getPermission('user.gallery.maxWidth')} × {#$__wcf->session->getPermission('user.gallery.maxHeight')} píxeles]]></item>
 		<item name="gallery.image.upload.restriction.maximumImageSize.description"><![CDATA[Si la imagen subida es mayor que estas restricciones, el sistema intenta reducir la escala de la imagen si es posible.]]></item>
 		<item name="gallery.image.upload.restriction.archives"><![CDATA[Subida de archivos]]></item>
 		<item name="gallery.image.upload.restriction.archives.description"><![CDATA[También puedes subir imágenes utilizando un archivo Zip, Tar o Gzip.]]></item>
@@ -241,7 +243,7 @@
 		<item name="gallery.image.comment.notification.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} {if $count == 1}ha comentado{else}han comentado{/if} en tu {if $image->isImage()}imagen{else}vídeo{/if} <strong>{$image->getTitle()}</strong>.]]></item>
 		<item name="gallery.image.comment.notification.mail.plaintext"><![CDATA[{@$authorList} ha comentado en tu {if $image->isImage()}imagen{else}vídeo{/if} “{@$image->getTitle()}” [URL:{@$image->getLink()}#comment{@$commentID}]{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
 		<item name="gallery.image.comment.notification.mail.html"><![CDATA[<p>{@$authorList} ha comentado en tu {if $image->isImage()}imagen{else}vídeo{/if} <a href="{$image->getLink()}#comment{@$commentID}">{$image->getTitle()}</a>:</p>]]></item>
-		<item name="gallery.image.comment.like.notification.title"><![CDATA[Reacción a comentario ({if $image->isImage()}Imagen{else}Vídeo{/if})]]></item>
+		<item name="gallery.image.comment.like.notification.title"><![CDATA[Reacción a tu comentario ({if $image->isImage()}Imagen{else}Vídeo{/if})]]></item>
 		<item name="gallery.image.comment.like.notification.title.stacked"><![CDATA[{#$count} usuarios han reaccionado a tu comentario ({if $image->isImage()}Imagen{else}Vídeo{/if})]]></item>
 		<item name="gallery.image.comment.like.notification.message"><![CDATA[<strong>{$author}</strong> ha reaccionado a tu comentario en {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->getTitle()}</strong> ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
 		<item name="gallery.image.comment.like.notification.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} {if $count == 1}ha reaccionado{else}han reaccionado{/if} a tu comentario en {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->getTitle()}</strong> ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
@@ -307,7 +309,7 @@
 		<item name="gallery.image.condition.displayMode"><![CDATA[Modo de visualización]]></item>
 		<item name="gallery.image.condition.displayMode.grid"><![CDATA[Cuadrícula]]></item>
 		<item name="gallery.image.condition.displayMode.motion"><![CDATA[Imágenes en movimiento]]></item>
-		<item name="gallery.image.condition.displayMode.description"><![CDATA[Esta opción no es aplicable a las cajas situadas en las barras laterales. Para la opción "Imágenes en movimiento", deben estar disponibles al menos dos imágenes mayores que {#1200}&times;{#900} píxeles.]]></item>
+		<item name="gallery.image.condition.displayMode.description"><![CDATA[Esta opción no es aplicable a las cajas situadas en las barras laterales. Para la opción "Imágenes en movimiento", deben estar disponibles al menos dos imágenes mayores que {#1200} × {#900} píxeles.]]></item>
 		<item name="gallery.image.condition.type"><![CDATA[Tipo]]></item>
 		<item name="gallery.image.condition.type.image"><![CDATA[Imágenes]]></item>
 		<item name="gallery.image.condition.type.video"><![CDATA[Vídeos]]></item>
@@ -516,7 +518,7 @@
 		<item name="wcf.acp.option.gallery_message_sidebar_enable_user_videos"><![CDATA[Mostrar el número de vídeos del autor]]></item>
 		<item name="wcf.acp.option.gallery_image_max_categories"><![CDATA[Máximo de categorías por imagen y vídeo]]></item>
 		<item name="wcf.acp.option.category.gallery.watermark"><![CDATA[Marca de agua]]></item>
-		<item name="wcf.acp.option.category.gallery.watermark.image"><![CDATA[Imágenes]]></item>
+		<item name="wcf.acp.option.category.gallery.watermark.image"><![CDATA[Imagen]]></item>
 		<item name="wcf.acp.option.category.gallery.watermark.text"><![CDATA[Texto]]></item>
 		<item name="wcf.acp.option.gallery_image_watermark_type"><![CDATA[Tipo de marca de agua]]></item>
 		<item name="wcf.acp.option.gallery_image_watermark_type.none"><![CDATA[No usar marca de agua]]></item>
