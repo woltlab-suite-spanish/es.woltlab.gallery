@@ -61,7 +61,7 @@
 		<item name="gallery.album.unreadAlbums"><![CDATA[Nuevos álbumes]]></item>
 	</category>
 	<category name="gallery.category">
-		<item name="gallery.category.delete.sure"><![CDATA[¿Realmente quieres eliminar esta categoría? Todas las categorías secundarias de esta categoría se moverán a la categoría principal de esta categoría. Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} que sólo se encuentren en esta categoría serán eliminados.]]></item>
+		<item name="gallery.category.delete.sure"><![CDATA[¿Realmente quieres eliminar esta categoría? Todas las categorías secundarias de esta categoría se moverán a la categoría principal. Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} que sólo pertenezcan a esta categoría serán eliminados.]]></item>
 	</category>
 	<category name="gallery.image">
 		<item name="gallery.image.image"><![CDATA[Imagen]]></item>
