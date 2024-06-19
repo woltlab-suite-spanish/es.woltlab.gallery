@@ -423,7 +423,7 @@
 		<item name="wcf.acp.content.provider.com.woltlab.gallery.album"><![CDATA[Álbumes]]></item>
 	</category>
 	<category name="wcf.acp.dataImport">
-		<item name="wcf.acp.dataImport.data.com.woltlab.gallery.image"><![CDATA[Imágenes (Galería)]]></item>
+		<item name="wcf.acp.dataImport.data.com.woltlab.gallery.image"><![CDATA[Imágenes de la galería]]></item>
 		<item name="wcf.acp.dataImport.data.com.woltlab.gallery.category"><![CDATA[Categorías de la galería]]></item>
 		<item name="wcf.acp.dataImport.data.com.woltlab.gallery.album"><![CDATA[Álbumes]]></item>
 		<item name="wcf.acp.dataImport.data.com.woltlab.gallery.image.comment"><![CDATA[Comentarios de imágenes]]></item>
