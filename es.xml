@@ -124,7 +124,7 @@
 		<item name="gallery.image.pendingImages"><![CDATA[{if $pendingImageList|count > 1}Hay {#$pendingImageList|count} {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}imágenes o vídeos subidos{else}imágenes subidas{/if} pendientes que aun no se han guardado{else}Hay {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}una imagen o vídeo subido{else}una imagen subida{/if} pendiente que aun no se ha guardado.{/if}]]></item>
 		<item name="gallery.image.pendingImages.delete"><![CDATA[Eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} pendientes]]></item>
 		<item name="gallery.image.pendingImages.delete.confirmMessage"><![CDATA[¿Realmente quieres eliminar las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} pendientes?]]></item>
-		<item name="gallery.image.pendingImages.load"><![CDATA[Cargar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} pendientes]]></item>
+		<item name="gallery.image.pendingImages.load"><![CDATA[Subir imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} pendientes]]></item>
 		<item name="gallery.image.recentActivity.image"><![CDATA[Ha {if $image->isVideoLink}añadido{else}subido{/if} {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$image->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
 		<item name="gallery.image.recentActivity.images"><![CDATA[Ha subido {if $images}{#$images} {if $images == 1}imagen{else}imágenes{/if}{/if}{if $videos}{if $images} y {/if}{#$videos} vídeo{if $videos > 1}s{/if}{/if}.]]></item>
 		<item name="gallery.image.recentActivity.likedImage"><![CDATA[Ha reaccionado con <span title="{$reactionType->getTitle()}" class="jsTooltip">{@$reactionType->renderIcon()}</span> {if $image->isImage()}a la imagen{else}al vídeo{/if} <a href="{$image->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
@@ -160,11 +160,11 @@
 		<item name="gallery.image.upload.error.minWidth"><![CDATA[La imagen “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” es demasiado pequeña.]]></item>
 		<item name="gallery.image.upload.error.maxSize"><![CDATA[La imagen “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” es demasiado grande.]]></item>
 		<item name="gallery.image.upload.error.noImage"><![CDATA[El archivo subido “{$file->getFilename()}” no es una imagen.]]></item>
-		<item name="gallery.image.upload.error.uploadFailed"><![CDATA[Se ha producido un error desconocido durante la carga de {if $file|isset}“{$file->getFilename()}”{else}un archivo{/if}.]]></item>
+		<item name="gallery.image.upload.error.uploadFailed"><![CDATA[Se ha producido un error desconocido durante la subida de {if $file|isset}“{$file->getFilename()}”{else}un archivo{/if}.]]></item>
 		<item name="gallery.image.upload.error.quotaExceeded"><![CDATA[Has superado tu límite de almacenamiento y no puedes subir nuevas imágenes. Debes eliminar imágenes existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.totalQuotaExceeded"><![CDATA[Has superado tu límite de almacenamiento y no puedes subir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.tooManyImages"><![CDATA[Has superado tu límite máximo de imágenes y no puedes subir nuevas imágenes. Debes eliminar imágenes existentes para liberar espacio.]]></item>
-		<item name="gallery.image.upload.error.tooManyImageSelected"><![CDATA[Has seleccionado {#$imageCount} imágenes pero {if $maximumImageCount}sólo puedes subir {#$maximumImageCount} {if $maximumImageCount == 1}imagen adicional{else}imágenes adicionales{/if}{else}no puedes cargar más imágenes{/if}.]]></item>
+		<item name="gallery.image.upload.error.tooManyImageSelected"><![CDATA[Has seleccionado {#$imageCount} imágenes pero {if $maximumImageCount}sólo puedes subir {#$maximumImageCount} {if $maximumImageCount == 1}imagen adicional{else}imágenes adicionales{/if}{else}no puedes subir más imágenes{/if}.]]></item>
 		<item name="gallery.image.upload.error.tooManyOfAll"><![CDATA[Has superado tu límite máximo de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} y no puedes añadir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.tooManyUploads"><![CDATA[Has superado tu límite máximo de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} y no puedes subir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.uploadPhpLimit"><![CDATA[El archivo excede el límite PHP “upload_max_filesize” y/o “post_max_size”.]]></item>
@@ -382,7 +382,7 @@
 		<item name="gallery.video.upload.error.tooManyVideos"><![CDATA[Has superado tu límite máximo de vídeos y no puedes subir nuevos vídeos. Debes eliminar vídeos existentes para liberar espacio.]]></item>
 		<item name="gallery.video.upload.error.fileExtension"><![CDATA[El archivo “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” tiene una extensión no válida.]]></item>
 		<item name="gallery.video.upload.error.maxSize"><![CDATA[El vídeo “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” es demasiado grande.]]></item>
-		<item name="gallery.video.upload.error.uploadFailed"><![CDATA[Se ha producido un error desconocido durante la carga de “{$file->getFilename()}”.]]></item>
+		<item name="gallery.video.upload.error.uploadFailed"><![CDATA[Se ha producido un error desconocido durante la subida de “{$file->getFilename()}”.]]></item>
 		<item name="gallery.video.upload.error.quotaExceeded"><![CDATA[Has superado tu límite de almacenamiento y no puedes subir nuevos vídeos. Debes eliminar vídeos existentes para liberar espacio.]]></item>
 		<item name="gallery.video.upload.restriction.fileExtensions"><![CDATA[Extensiones de archivo permitidas]]></item>
 		<item name="gallery.video.upload.restriction.count"><![CDATA[Vídeos subidos]]></item>
@@ -551,7 +551,7 @@
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_images"><![CDATA[Mostrar las últimas imágenes del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_videos"><![CDATA[Mostrar los últimos vídeos del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.category.gallery.video"><![CDATA[Vídeos]]></item>
-		<item name="wcf.acp.option.gallery_video_upload"><![CDATA[Habilitar la carga de vídeos]]></item>
+		<item name="wcf.acp.option.gallery_video_upload"><![CDATA[Habilitar la subida de vídeos]]></item>
 		<item name="wcf.acp.option.gallery_video_links"><![CDATA[Habilitar los enlaces de vídeos]]></item>
 		<item name="wcf.acp.option.gallery_video_links.description"><![CDATA[Además de habilitar esta opción, también tienes que habilitar las plataformas de vídeo de abajo desde las que quieres que los usuarios enlacen vídeos.]]></item>
 		<item name="wcf.acp.option.category.gallery.video.link.provider"><![CDATA[Plataformas de vídeo]]></item>
