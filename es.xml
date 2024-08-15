@@ -37,11 +37,11 @@
 		<item name="gallery.album.moreAlbums.images"><![CDATA[{if $albumItem->images}{#$albumItem->images} {if $albumItem->images == 1}imagen{else}imágenes{/if}{/if}{if $albumItem->videos}{if $albumItem->images} y {/if}{#$albumItem->videos} {if $albumItem->videos == 1}vídeo{else}vídeos{/if}{/if}]]></item>
 		<item name="gallery.album.albums"><![CDATA[Álbumes]]></item>
 		<item name="gallery.album.accessLevel"><![CDATA[Puede ver el álbum]]></item>
-		<item name="gallery.album.accessLevel.description"><![CDATA[Este álbum y sus imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} deben ser accesibles sólo para los usuarios seleccionados.{if $album|isset} Por favor, tenga en cuenta que los cambios se aplican inmediatamente a todas las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}.{/if}]]></item>
+		<item name="gallery.album.accessLevel.description"><![CDATA[Este álbum y sus imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} deben ser accesibles solo para los usuarios seleccionados.{if $album|isset} Por favor, tenga en cuenta que los cambios se aplican inmediatamente a todas las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}.{/if}]]></item>
 		<item name="gallery.album.accessLevel.everyone"><![CDATA[Todos]]></item>
 		<item name="gallery.album.accessLevel.registered"><![CDATA[Usuarios registrados]]></item>
 		<item name="gallery.album.accessLevel.following"><![CDATA[Usuarios seguidos]]></item>
-		<item name="gallery.album.accessLevel.owner"><![CDATA[Sólo yo]]></item>
+		<item name="gallery.album.accessLevel.owner"><![CDATA[Solo yo]]></item>
 		<item name="gallery.album.accessLevel.info"><![CDATA[{if $album->hasRegisteredAccessLevel()}Accesible solo para usuarios registrados{elseif $album->hasFollowingAccessLevel()}Accesible solo para usuarios seguidos{elseif $album->hasOwnerAccessLevel()}Álbum privado{/if}]]></item>
 		<item name="gallery.album.ownerImageModerationWarning"><![CDATA[Debido a que las nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} subidos requieren aprobación, no puedes subir más imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} a este álbum privado.]]></item>
 		<item name="gallery.album.sortImages"><![CDATA[Ordenar imágenes]]></item>
@@ -61,7 +61,7 @@
 		<item name="gallery.album.unreadAlbums"><![CDATA[Nuevos álbumes]]></item>
 	</category>
 	<category name="gallery.category">
-		<item name="gallery.category.delete.sure"><![CDATA[¿Realmente quieres eliminar esta categoría? Todas las categorías secundarias de esta categoría se moverán a la categoría principal. Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} que sólo pertenezcan a esta categoría serán eliminados.]]></item>
+		<item name="gallery.category.delete.sure"><![CDATA[¿Realmente quieres eliminar esta categoría? Todas las categorías secundarias de esta categoría se moverán a la categoría principal. Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} que solo pertenezcan a esta categoría serán eliminados.]]></item>
 	</category>
 	<category name="gallery.image">
 		<item name="gallery.image.image"><![CDATA[Imagen]]></item>
@@ -164,7 +164,7 @@
 		<item name="gallery.image.upload.error.quotaExceeded"><![CDATA[Has superado tu límite de almacenamiento y no puedes subir nuevas imágenes. Debes eliminar imágenes existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.totalQuotaExceeded"><![CDATA[Has superado tu límite de almacenamiento y no puedes subir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.tooManyImages"><![CDATA[Has superado tu límite máximo de imágenes y no puedes subir nuevas imágenes. Debes eliminar imágenes existentes para liberar espacio.]]></item>
-		<item name="gallery.image.upload.error.tooManyImageSelected"><![CDATA[Has seleccionado {#$imageCount} imágenes pero {if $maximumImageCount}sólo puedes subir {#$maximumImageCount} {if $maximumImageCount == 1}imagen adicional{else}imágenes adicionales{/if}{else}no puedes subir más imágenes{/if}.]]></item>
+		<item name="gallery.image.upload.error.tooManyImageSelected"><![CDATA[Has seleccionado {#$imageCount} imágenes pero {if $maximumImageCount}solo puedes subir {#$maximumImageCount} {if $maximumImageCount == 1}imagen adicional{else}imágenes adicionales{/if}{else}no puedes subir más imágenes{/if}.]]></item>
 		<item name="gallery.image.upload.error.tooManyOfAll"><![CDATA[Has superado tu límite máximo de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} y no puedes añadir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.tooManyUploads"><![CDATA[Has superado tu límite máximo de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} y no puedes subir nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}. Debes eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} existentes para liberar espacio.]]></item>
 		<item name="gallery.image.upload.error.uploadPhpLimit"><![CDATA[El archivo excede el límite PHP “upload_max_filesize” y/o “post_max_size”.]]></item>
@@ -397,7 +397,7 @@
 		<item name="gallery.video.link.edit"><![CDATA[Editar enlace de vídeo]]></item>
 		<item name="gallery.video.link.link.edit.overwriteData"><![CDATA[Sobrescribir datos de vídeo existentes]]></item>
 		<item name="gallery.video.link.link.edit.overwriteData.description"><![CDATA[Si seleccionas esta opción y los datos de vídeo pueden obtenerse automáticamente del proveedor de vídeo, la información existente se sobrescribirá con los datos del proveedor de vídeo.]]></item>
-		<item name="gallery.video.link.link.edit.info"><![CDATA[El nuevo enlace de vídeo sólo se guardará una vez que se hayan guardado todos los cambios. Si se puede obtener una miniatura del proveedor de vídeo, también se actualizará con un breve retraso una vez que se hayan guardado todos los cambios.]]></item>
+		<item name="gallery.video.link.link.edit.info"><![CDATA[El nuevo enlace de vídeo solo se guardará una vez que se hayan guardado todos los cambios. Si se puede obtener una miniatura del proveedor de vídeo, también se actualizará con un breve retraso una vez que se hayan guardado todos los cambios.]]></item>
 		<item name="gallery.video.link.button.edit"><![CDATA[Editar enlace de vídeo]]></item>
 	</category>
 	<category name="gallery.search">
