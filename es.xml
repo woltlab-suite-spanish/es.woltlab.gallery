@@ -152,7 +152,7 @@
 		<item name="gallery.image.upload.error.containsNoValidImages"><![CDATA[El archivo “{$file->getFilename()}” no contiene imágenes válidas.]]></item>
 		<item name="gallery.image.upload.error.fileExtension"><![CDATA[El archivo “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” tiene una extensión no válida.]]></item>
 		<item name="gallery.image.upload.error.invalidArchive"><![CDATA[No se ha podido abrir el archivo “{$file->getFilename()}”.]]></item>
-		<item name="gallery.image.upload.error.markedImages"><![CDATA[Uno o más campos son erróneos, por favor comprueba los campos de entrada de {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}las imágenes y vídeos resaltados{else}de las imágenes resaldas{/if} haciendo clic en las miniaturas.]]></item>
+		<item name="gallery.image.upload.error.markedImages"><![CDATA[Uno o más campos son erróneos, por favor, comprueba los campos de entrada de {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}las imágenes y vídeos resaltados{else}de las imágenes resaldas{/if} haciendo clic en las miniaturas.]]></item>
 		<item name="gallery.image.upload.error.maxHeight"><![CDATA[La imagen “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” es demasiado alta.]]></item>
 		<item name="gallery.image.upload.error.maxParallelFileUpload"><![CDATA[No puedes subir más de {if GALLERY_MAX_PARALLEL_IMAGE_UPLOADS != 1}{#GALLERY_MAX_PARALLEL_IMAGE_UPLOADS} imágenes{else}una imagen{/if} en paralelo.]]></item>
 		<item name="gallery.image.upload.error.maxWidth"><![CDATA[La imagen “{if $file|isset}{$file->getFilename()}{else}{$filename}{/if}” es demasiado ancha.]]></item>
