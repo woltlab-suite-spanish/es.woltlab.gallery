@@ -511,7 +511,7 @@
 		<item name="wcf.acp.option.gallery_image_min_width"><![CDATA[Anchura mínima de la imagen]]></item>
 		<item name="wcf.acp.option.gallery_image_min_width.description"><![CDATA[Anchura mínima en píxeles de las imágenes subidas.]]></item>
 		<item name="wcf.acp.option.gallery_images_per_page"><![CDATA[Imágenes y vídeos por página]]></item>
-		<item name="wcf.acp.option.gallery_index_enable_stats"><![CDATA[Mostrar las estadísticas de la galería]]></item>
+		<item name="wcf.acp.option.gallery_index_enable_stats"><![CDATA[Mostrar estadísticas de la galería]]></item>
 		<item name="wcf.acp.option.gallery_max_parallel_image_uploads"><![CDATA[Máximo de subidas simultáneas]]></item>
 		<item name="wcf.acp.option.gallery_max_parallel_image_uploads.description"><![CDATA[Número máximo de subidas simultáneas por usuario.]]></item>
 		<item name="wcf.acp.option.gallery_message_sidebar_enable_user_images"><![CDATA[Mostrar el número de imágenes del autor]]></item>
