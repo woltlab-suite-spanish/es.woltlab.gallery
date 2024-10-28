@@ -569,7 +569,7 @@ Make sure that there are no whitespaces before and after the actual client ident
 		<item name="wcf.acp.option.gallery_image_default_sort_field"><![CDATA[Ordenar por]]></item>
 		<item name="wcf.acp.option.gallery_image_default_sort_field.description"><![CDATA[Elige la opción de ordenación por defecto de las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}.]]></item>
 		<item name="wcf.acp.option.gallery_image_default_sort_order"><![CDATA[Orden de clasificación]]></item>
-		<item name="wcf.acp.option.gallery_image_default_sort_order.description"><![CDATA[Elige el orden por defecto de las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}.]]></item>
+		<item name="wcf.acp.option.gallery_image_default_sort_order.description"><![CDATA[Elige el orden de clasificación por defecto de las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}.]]></item>
 		<item name="wcf.acp.option.gallery_images_in_motion_duration"><![CDATA[Duración de imagen para “Imágenes en movimiento”]]></item>
 		<item name="wcf.acp.option.gallery_images_in_motion_duration.description"><![CDATA[Cantidad de tiempo que se muestra una imagen en los cuadros “Imágenes en movimiento”.]]></item>
 		<item name="wcf.acp.option.gallery_image_list_display_mode"><![CDATA[Modo de visualización]]></item>
