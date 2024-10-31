@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="es" languagename="Español" countrycode="es">
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/6.0/language.xsd" languagecode="es">
 <import>
 	<category name="gallery.acp.image">
 		<item name="gallery.acp.image.bulkProcessing"><![CDATA[Procesamiento en masa de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}]]></item>
@@ -14,7 +14,6 @@
 		<item name="gallery.acp.image.bulkProcessing.enableComments"><![CDATA[Habilitar comentarios]]></item>
 		<item name="gallery.acp.image.bulkProcessing.disableComments"><![CDATA[Deshabilitar comentarios]]></item>
 		<item name="gallery.acp.image.bulkProcessing.setCategories"><![CDATA[Establecer categorías]]></item>
-		<item name="gallery.acp.image.bulkProcessing.setCategories.categories"><![CDATA[Categorías]]></item>
 		<item name="gallery.acp.image.bulkProcessing.setCategories.categories.description"><![CDATA[Las categorías existentes se sobrescribirán con las categorías seleccionadas.]]></item>
 	</category>
 	<category name="gallery.acp.menu">
@@ -69,6 +68,7 @@
 		<item name="gallery.image.albumID.error.cannotAddToPrivateAlbumDueToModeration"><![CDATA[Debido a que las nuevas imágenes deben ser aprobadas por los moderadores, no está permitido subir nuevas imágenes a los álbumes privados.]]></item>
 		<item name="gallery.image.albumID.overwrite.confirmMessage"><![CDATA[Realmente desea asignar todas las demás imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} subidos a este álbum?]]></item>
 		<item name="gallery.image.albumImage"><![CDATA[{if $image->isImage()}Imagen{else}Vídeo{/if} {#$albumImage} de {if $albumImageCount|isset}{#$albumImageCount}{else}{#($image->getAlbum()->images + $image->getAlbum()->videos)}{/if}]]></item>
+		<item name="gallery.image.bbcode.albumImage"><![CDATA[{if $image->isImage()}Imagen{else}Vídeo{/if} {#$albumImage} de {#$imageCount}{if $albumImageCount > $imageCount} ({#($albumImageCount - $imageCount)} más){/if}]]></item>
 		<item name="gallery.image.browser"><![CDATA[Galería]]></item>
 		<item name="gallery.image.browser.insert"><![CDATA[Insertar en el mensaje]]></item>
 		<item name="gallery.image.browser.insert.tiny"><![CDATA[Miniatura ({$dimensions[width]}×{$dimensions[height]})]]></item>
@@ -86,7 +86,6 @@
 		<item name="gallery.image.button.overwrite"><![CDATA[Aplicar a otras imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}]]></item>
 		<item name="gallery.image.button.upload"><![CDATA[Subir]]></item>
 		<item name="gallery.image.button.sort"><![CDATA[Ordenar]]></item>
-		<item name="gallery.image.categories"><![CDATA[Categorías]]></item>
 		<item name="gallery.image.categorizedImages"><![CDATA[Imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} en la categoría “{$category->getTitle()}”]]></item>
 		<item name="gallery.image.categoryIDs.overwrite.confirmMessage"><![CDATA[¿Realmente quieres asignar todas las demás imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} subidos a las categorías seleccionadas?]]></item>
 		<item name="gallery.image.comment"><![CDATA[Comentario de la galería]]></item>
@@ -125,11 +124,11 @@
 		<item name="gallery.image.pendingImages.delete"><![CDATA[Eliminar imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} pendientes]]></item>
 		<item name="gallery.image.pendingImages.delete.confirmMessage"><![CDATA[¿Realmente quieres eliminar las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} pendientes?]]></item>
 		<item name="gallery.image.pendingImages.load"><![CDATA[Subir imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} pendientes]]></item>
-		<item name="gallery.image.recentActivity.image"><![CDATA[Ha {if $image->isVideoLink}añadido{else}subido{/if} {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$image->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
-		<item name="gallery.image.recentActivity.images"><![CDATA[Ha subido {if $images}{#$images} {if $images == 1}imagen{else}imágenes{/if}{/if}{if $videos}{if $images} y {/if}{#$videos} vídeo{if $videos > 1}s{/if}{/if}.]]></item>
-		<item name="gallery.image.recentActivity.likedImage"><![CDATA[Ha reaccionado con <span title="{$reactionType->getTitle()}" class="jsTooltip">{@$reactionType->renderIcon()}</span> {if $image->isImage()}a la imagen{else}al vídeo{/if} <a href="{$image->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
-		<item name="gallery.image.recentActivity.imageComment"><![CDATA[Ha comentado en {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$comment->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
-		<item name="gallery.image.recentActivity.imageCommentResponse"><![CDATA[Ha respondido a un comentario de {user object=$commentAuthor} en {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$response->getLink()}" class="galleryImageLink" data-image-id="{@$image->imageID}">{$image->title}</a>.]]></item>
+		<item name="gallery.image.recentActivity.image"><![CDATA[<strong>{$author}</strong> {if $image->isVideoLink}ha añadido{else}ha subido{/if} {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->title}</strong>.]]></item>
+		<item name="gallery.image.recentActivity.images"><![CDATA[<strong>{$author}</strong> ha subido {if $images}{#$images} {if $images == 1}imagen{else}imágenes{/if}{/if}{if $videos}{if $images} y {/if}{#$videos} vídeo{if $videos > 1}s{/if}{/if}.]]></item>
+		<item name="gallery.image.recentActivity.likedImage"><![CDATA[<strong>{$author}</strong> ha reaccionado con <span title="{$reactionType->getTitle()}" class="jsTooltip">{unsafe:$reactionType->renderIcon()}</span> a {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->title}</strong>.]]></item>
+		<item name="gallery.image.recentActivity.imageComment"><![CDATA[<strong>{$author}</strong> ha comentado en {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->title}</strong>.]]></item>
+		<item name="gallery.image.recentActivity.imageCommentResponse"><![CDATA[<strong>{$author}</strong> ha respondido al comentario de <strong>{$commentAuthor}</strong> en {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->title}</strong>.]]></item>
 		<item name="gallery.image.restore"><![CDATA[Restaurar]]></item>
 		<item name="gallery.image.size"><![CDATA[Dimensiones]]></item>
 		<item name="gallery.image.tags.overwrite.confirmMessage"><![CDATA[¿Realmente quieres asignar las tags seleccionadas a todas las demás {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}imágenes y vídeos subidos{else}imágenes subidas{/if}?]]></item>
@@ -302,7 +301,6 @@
 		<item name="gallery.image.sortField.views"><![CDATA[Visitas]]></item>
 		<item name="gallery.image.sortField.creationTime"><![CDATA[Fecha de creación]]></item>
 		<item name="gallery.image.conditions"><![CDATA[Imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/Vídeo{/if}]]></item>
-		<item name="gallery.image.condition.category"><![CDATA[Categoría]]></item>
 		<item name="gallery.image.condition.category.description"><![CDATA[Las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeos{/if} tienen que estar en cualquiera de las categorías seleccionadas. Se pueden seleccionar varias categorías manteniendo pulsada las tecla “Ctrl/Shift” (Windows) o Comando (Mac OS) y haciendo clic en las categorías deseadas.]]></item>
 		<item name="gallery.image.condition.timeFrame"><![CDATA[Antigüedad]]></item>
 		<item name="gallery.image.condition.timeFrame.description"><![CDATA[Esta opción establece la antigüedad mínima y máxima en días de las imágenes mostradas en la caja.]]></item>
@@ -816,5 +814,6 @@ Make sure that there are no whitespaces before and after the actual client ident
 	<item name="wcf.user.objectWatch.subscribe.com.woltlab.gallery.category"/>
 	<item name="wcf.user.objectWatch.unsubscribe.com.woltlab.gallery.category"/>
 	<item name="gallery.image.coordinates.locationSearch"/>
+	<item name="gallery.image.moderation.info"/>
 </delete>
 </language>
