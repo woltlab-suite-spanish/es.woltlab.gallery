@@ -11,8 +11,8 @@
 		<item name="gallery.acp.image.bulkProcessing.disable"><![CDATA[Desactivar]]></item>
 		<item name="gallery.acp.image.bulkProcessing.enable"><![CDATA[Activar]]></item>
 		<item name="gallery.acp.image.bulkProcessing.success"><![CDATA[La acción seleccionada se ha ejecutado y ha afectado a {#$affectedObjectCount} {if $affectedObjectCount == 1}imagen{else}imágenes{/if}{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/{if $affectedObjectCount == 1}vídeo{else}vídeos{/if}{/if}.{if $affectedObjectCount > 0}<br>Por favor, asegúrate de <a href="{link controller='RebuildData'}{/link}">“verificar la integridad”</a> a continuación.{/if}]]></item>
-		<item name="gallery.acp.image.bulkProcessing.enableComments"><![CDATA[Habilitar comentarios]]></item>
-		<item name="gallery.acp.image.bulkProcessing.disableComments"><![CDATA[Deshabilitar comentarios]]></item>
+		<item name="gallery.acp.image.bulkProcessing.enableComments"><![CDATA[Activar comentarios]]></item>
+		<item name="gallery.acp.image.bulkProcessing.disableComments"><![CDATA[Desactivar comentarios]]></item>
 		<item name="gallery.acp.image.bulkProcessing.setCategories"><![CDATA[Establecer categorías]]></item>
 		<item name="gallery.acp.image.bulkProcessing.setCategories.categories.description"><![CDATA[Las categorías existentes se sobrescribirán con las categorías seleccionadas.]]></item>
 	</category>
@@ -263,9 +263,9 @@
 		<item name="gallery.image.like.notification.title.stacked"><![CDATA[{#$count} usuarios han reaccionado a tu {if $image->isImage()}imagen{else}vídeo{/if}]]></item>
 		<item name="gallery.image.like.notification.message"><![CDATA[<strong>{$author}</strong> ha reaccionado a tu {if $image->isImage()}imagen{else}vídeo{/if} <strong>{$image->getTitle()}</strong> ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
 		<item name="gallery.image.like.notification.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} {if $count == 1}ha reaccionado{else}han reaccionado{/if} a tu {if $image->isImage()}imagen{else}vídeo{/if} <strong>{$image->getTitle()}</strong> ({@$__wcf->getReactionHandler()->renderInlineList($reactions)}).]]></item>
-		<item name="gallery.image.enableComments"><![CDATA[Habilitar comentarios]]></item>
+		<item name="gallery.image.enableComments"><![CDATA[Activar comentarios]]></item>
 		<item name="gallery.image.enableComments.description"><![CDATA[Permite a los usuarios escribir comentarios.]]></item>
-		<item name="gallery.image.enableComments.overwrite.confirmMessage"><![CDATA[¿Realmente quieres aplicar el ajuste “Habilitar comentarios” a todas {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}las imágenes y vídeos subidos{else}las imágenes subidas{/if}?]]></item>
+		<item name="gallery.image.enableComments.overwrite.confirmMessage"><![CDATA[¿Realmente quieres aplicar el ajuste “Activar comentarios” a todas {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}las imágenes y vídeos subidos{else}las imágenes subidas{/if}?]]></item>
 		<item name="gallery.image.moreImages"><![CDATA[Más imágenes]]></item>
 		<item name="gallery.image.overwriteData.confirmMessage"><![CDATA[¿Realmente quieres aplicar los detalles de la imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeo{/if} actual a todas las demás imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if}?]]></item>
 		<item name="gallery.image.button.overwriteAll"><![CDATA[Aplicar a todos]]></item>
@@ -322,11 +322,11 @@
 		<item name="gallery.image.condition.state.isNotDeleted"><![CDATA[No en la papelera]]></item>
 		<item name="gallery.image.condition.state.isDisabled"><![CDATA[Esperando aprobación]]></item>
 		<item name="gallery.image.condition.state.isEnabled"><![CDATA[Aprobada]]></item>
-		<item name="gallery.image.condition.state.hasEnabledComments"><![CDATA[Comentarios habilitados]]></item>
-		<item name="gallery.image.condition.state.hasDisabledComments"><![CDATA[Comentarios deshabilitados]]></item>
+		<item name="gallery.image.condition.state.hasEnabledComments"><![CDATA[Comentarios activados]]></item>
+		<item name="gallery.image.condition.state.hasDisabledComments"><![CDATA[Comentarios desactivados]]></item>
 		<item name="gallery.image.condition.state.isDeleted.error.conflict"><![CDATA["En la papelera" y "No en la papelera" no pueden seleccionarse al mismo tiempo.]]></item>
 		<item name="gallery.image.condition.state.isDisabled.error.conflict"><![CDATA["Esperando aprobación" y "Aprobado" no pueden seleccionarse al mismo tiempo.]]></item>
-		<item name="gallery.image.condition.state.enableComments.error.conflict"><![CDATA[“Comentarios habilitados” y “Comentarios deshabilitados” no pueden seleccionarse al mismo tiempo.]]></item>
+		<item name="gallery.image.condition.state.enableComments.error.conflict"><![CDATA[“Comentarios activados” y “Comentarios desactivados” no pueden seleccionarse al mismo tiempo.]]></item>
 		<item name="gallery.image.add.button.previousImage"><![CDATA[Imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeo{/if} anterior]]></item>
 		<item name="gallery.image.add.button.nextImage"><![CDATA[Nueva imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeo{/if}]]></item>
 		<item name="gallery.image.sortField.showOrder"><![CDATA[Orden por defecto]]></item>
@@ -549,9 +549,9 @@
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_images"><![CDATA[Mostrar las últimas imágenes del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_videos"><![CDATA[Mostrar los últimos vídeos del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.category.gallery.video"><![CDATA[Vídeos]]></item>
-		<item name="wcf.acp.option.gallery_video_upload"><![CDATA[Habilitar la subida de vídeos]]></item>
-		<item name="wcf.acp.option.gallery_video_links"><![CDATA[Habilitar los enlaces de vídeos]]></item>
-		<item name="wcf.acp.option.gallery_video_links.description"><![CDATA[Además de habilitar esta opción, también tienes que habilitar las plataformas de vídeo de abajo desde las que quieres que los usuarios enlacen vídeos.]]></item>
+		<item name="wcf.acp.option.gallery_video_upload"><![CDATA[Activar subida de vídeos]]></item>
+		<item name="wcf.acp.option.gallery_video_links"><![CDATA[Activar enlaces de vídeos]]></item>
+		<item name="wcf.acp.option.gallery_video_links.description"><![CDATA[Además de activar esta opción, también tienes que activar las plataformas de vídeo de abajo desde las que quieres que los usuarios enlacen vídeos.]]></item>
 		<item name="wcf.acp.option.category.gallery.video.link.provider"><![CDATA[Plataformas de vídeo]]></item>
 		<item name="wcf.acp.option.category.gallery.video.link.provider.description"><![CDATA[Para que las miniaturas y los datos de los vídeos se obtengan automáticamente al crear un enlace de vídeo, tienes que crear claves para algunas plataformas de vídeo.]]></item>
 		<item name="wcf.acp.option.gallery_video_link_providers"><![CDATA[Plataformas de vídeo permitidas]]></item>
