@@ -545,7 +545,7 @@
 		<item name="wcf.acp.option.gallery_image_watermark_font_size"><![CDATA[Tamaño de fuente]]></item>
 		<item name="wcf.acp.option.gallery_image_watermark_font_size.description"><![CDATA[Tamaño de la fuente en puntos.]]></item>
 		<item name="wcf.acp.option.gallery_image_empty_recycle_bin_cycle"><![CDATA[Vaciar papelera]]></item>
-		<item name="wcf.acp.option.gallery_image_empty_recycle_bin_cycle.description"><![CDATA[Las imágenes se eliminan de la papelera en los días siguientes. Utiliza 0 para desactivar.]]></item>
+		<item name="wcf.acp.option.gallery_image_empty_recycle_bin_cycle.description"><![CDATA[Las imágenes se eliminan de la papelera después de los días indicados. Utiliza 0 para desactivar.]]></item>
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_images"><![CDATA[Mostrar las últimas imágenes del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.gallery_user_profile_enable_latest_user_videos"><![CDATA[Mostrar los últimos vídeos del usuario en la barra lateral del perfil]]></item>
 		<item name="wcf.acp.option.category.gallery.video"><![CDATA[Vídeos]]></item>
