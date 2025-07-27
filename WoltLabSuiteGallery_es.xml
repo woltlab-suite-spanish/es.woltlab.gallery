@@ -484,7 +484,7 @@
 		<item name="wcf.acp.group.option.user.gallery.canLinkVideo"><![CDATA[Puede añadir enlaces de vídeos]]></item>
 		<item name="wcf.acp.group.option.user.gallery.canLinkVideoWithoutModeration"><![CDATA[Puede añadir enlaces de vídeos sin aprobación]]></item>
 		<item name="wcf.acp.group.option.user.gallery.canEditVideo"><![CDATA[Puede editar sus vídeos]]></item>
-		<item name="wcf.acp.group.option.user.gallery.canDeleteVideo"><![CDATA[Pueden mover sus vídeos a la papelera]]></item>
+		<item name="wcf.acp.group.option.user.gallery.canDeleteVideo"><![CDATA[Puede mover sus vídeos a la papelera]]></item>
 		<item name="wcf.acp.group.option.user.gallery.videoQuota"><![CDATA[Cuota máxima del sistema de archivos]]></item>
 		<item name="wcf.acp.group.option.user.gallery.videoQuota.description"><![CDATA[El espacio máximo en disco permitido para los vídeos. Las miniaturas de vídeo están excluidas de esta cuota.]]></item>
 		<item name="wcf.acp.group.option.user.gallery.maxUploadedVideos"><![CDATA[Máximo de vídeos subidos]]></item>
