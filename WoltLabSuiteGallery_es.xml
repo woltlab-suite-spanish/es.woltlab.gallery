@@ -94,7 +94,7 @@
 		<item name="gallery.image.coordinates"><![CDATA[Coordenadas]]></item>
 		<item name="gallery.image.coordinates.description"><![CDATA[Puedes especificar una ubicación para esta imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}/vídeo{/if}.]]></item>
 		<item name="gallery.image.coordinates.location"><![CDATA[Ubicación]]></item>
-		<item name="gallery.image.coordinates.location.description"><![CDATA[Escriba la ubicación y elige un resultado entre las sugerencias.]]></item>
+		<item name="gallery.image.coordinates.location.description"><![CDATA[Escribe la ubicación y elige un resultado entre las sugerencias.]]></item>
 		<item name="gallery.image.coordinates.overwrite.confirmMessage"><![CDATA[¿Realmente quieres asignar todas las demás imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} subidos a esta ubicación?]]></item>
 		<item name="gallery.image.coordinates.useCoordinates"><![CDATA[Especificar ubicación]]></item>
 		<item name="gallery.image.delete"><![CDATA[Eliminar]]></item>
