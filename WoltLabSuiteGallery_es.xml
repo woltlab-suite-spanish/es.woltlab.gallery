@@ -291,7 +291,7 @@
 		<item name="gallery.image.rotate.90"><![CDATA[Girar 90°]]></item>
 		<item name="gallery.image.rotate.180"><![CDATA[Girar 180°]]></item>
 		<item name="gallery.image.rotate.270"><![CDATA[Girar 270°]]></item>
-		<item name="gallery.image.rotate.confirmMessage"><![CDATA[¿Realmente quieres rotar la imagen? El área de miniaturas seleccionada se restablecerá durante la rotación..]]></item>
+		<item name="gallery.image.rotate.confirmMessage"><![CDATA[¿Realmente quieres rotar la imagen? El área de miniaturas seleccionada se restablecerá durante la rotación.]]></item>
 		<item name="gallery.image.categoryIDs.error.tooMany"><![CDATA[Has seleccionado demasiadas categorías. Puedes seleccionar hasta {@GALLERY_IMAGE_MAX_CATEGORIES} {if GALLERY_IMAGE_MAX_CATEGORIES == 1}categoría{else}categorías{/if}.]]></item>
 		<item name="gallery.image.sortField.comments"><![CDATA[Comentarios]]></item>
 		<item name="gallery.image.sortField.cumulativeLikes"><![CDATA[Reacciones]]></item>
