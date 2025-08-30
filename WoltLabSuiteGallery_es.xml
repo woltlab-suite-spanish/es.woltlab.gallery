@@ -584,7 +584,7 @@ Make sure that there are no whitespaces before and after the actual client ident
 	</category>
 	<category name="wcf.acp.rebuildData">
 		<item name="wcf.acp.rebuildData.gallery_system_worker_ThumbnailRebuildDataWorker"><![CDATA[Reconstruir miniaturas de imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} de la galería]]></item>
-		<item name="wcf.acp.rebuildData.gallery_system_worker_ThumbnailRebuildDataWorker.description"><![CDATA[Reconstruir las miniaturas de las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} de la galería.]]></item>
+		<item name="wcf.acp.rebuildData.gallery_system_worker_ThumbnailRebuildDataWorker.description"><![CDATA[Reconstruye las miniaturas de las imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} de la galería.]]></item>
 		<item name="wcf.acp.rebuildData.gallery_system_worker_AlbumRebuildDataWorker"><![CDATA[Reconstruir álbumes]]></item>
 		<item name="wcf.acp.rebuildData.gallery_system_worker_AlbumRebuildDataWorker.description"><![CDATA[Reconstruye los contadores y las portadas de los álbumes.]]></item>
 		<item name="wcf.acp.rebuildData.gallery_system_worker_ImageRebuildDataWorker"><![CDATA[Reconstruir imágemes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} y vídeos{/if} de la galería]]></item>
