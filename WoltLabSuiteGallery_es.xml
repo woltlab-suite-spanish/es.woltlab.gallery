@@ -641,7 +641,7 @@ Make sure that there are no whitespaces before and after the actual client ident
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.Album"><![CDATA[Álbum <a href="{$album->getLink()}">{$album->getTitle()}</a>]]></item>
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.CategoryImageList"><![CDATA[Categoría de la galería <a href="{$category->getLink()}">{$category->getTitle()}</a>]]></item>
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.Image"><![CDATA[{if $image->isImage()}Imagen{else}Vídeo{/if} <a href="{$image->getLink()}">{$image->getTitle()}</a>]]></item>
-		<item name="wcf.page.onlineLocation.com.woltlab.gallery.ImageEdit"><![CDATA[Editing {if $image->isImage()}Image{else}Video{/if} <a href="{$image->getLink()}">{$image->getTitle()}</a>]]></item>
+		<item name="wcf.page.onlineLocation.com.woltlab.gallery.ImageEdit"><![CDATA[Editando {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$image->getLink()}">{$image->getTitle()}</a>]]></item>
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.UserAlbumList"><![CDATA[<a href="{link controller='UserAlbumList' application='gallery' object=$user}{/link}">Álbumes de {$user->username}</a>]]></item>
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.UserImageList"><![CDATA[<a href="{link controller='UserImageList' application='gallery' object=$user}{/link}">Imágenes de {$user->username}</a>]]></item>
 		<item name="wcf.page.onlineLocation.com.woltlab.gallery.UserVideoList"><![CDATA[<a href="{link controller='UserVideoList' application='gallery' object=$user}{/link}">Vídeos de {$user->username}</a>]]></item>
