@@ -234,7 +234,7 @@
 		<item name="gallery.image.mention.notification.message"><![CDATA[<strong>{$author}</strong> te ha mencionado en la descripción de {if $image->isImage()}la imagen{else}el vídeo{/if} <strong>{$image->getTitle()}</strong>.]]></item>
 		<item name="gallery.image.mention.notification.mail.plaintext"><![CDATA[{@$author} te ha mencionado en la descripción de {if $image->isImage()}la imagen{else}el vídeo{/if} “{@$image->getTitle()}” [URL:{@$image->getLink()}]:]]></item>
 		<item name="gallery.image.mention.notification.mail.html"><![CDATA[<p><strong>{$author}</strong> te ha mencionado en la descripción de {if $image->isImage()}la imagen{else}el vídeo{/if} <a href="{$image->getLink()}">{$image->getTitle()}</a>:</p>]]></item>
-		<item name="gallery.image.marker.notification.title"><![CDATA[You were marked]]></item>
+		<item name="gallery.image.marker.notification.title"><![CDATA[Has sido marcado]]></item>
 		<item name="gallery.image.marker.notification.message"><![CDATA[<strong>{$author}</strong> te ha marcado en la imagen <strong>{$image->getTitle()}</strong>.]]></item>
 		<item name="gallery.image.marker.notification.mail.plaintext"><![CDATA[{@$author} te ha marcado en la imagen “{@$image->getTitle()}” [URL:{@$image->getLink()}]:]]></item>
 		<item name="gallery.image.marker.notification.mail.html"><![CDATA[<p><strong>{$author}</strong> te ha marcado en la imagen <a href="{$image->getLink()}">{$image->getTitle()}</a>:</p>]]></item>
