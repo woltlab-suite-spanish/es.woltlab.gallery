@@ -295,7 +295,6 @@
 		<item name="gallery.image.categoryIDs.error.tooMany"><![CDATA[Has seleccionado demasiadas categorías. Puedes seleccionar hasta {@GALLERY_IMAGE_MAX_CATEGORIES} {if GALLERY_IMAGE_MAX_CATEGORIES == 1}categoría{else}categorías{/if}.]]></item>
 		<item name="gallery.image.sortField.comments"><![CDATA[Comentarios]]></item>
 		<item name="gallery.image.sortField.cumulativeLikes"><![CDATA[Reacciones]]></item>
-		<item name="gallery.image.sortField.random"><![CDATA[Aleatorio]]></item>
 		<item name="gallery.image.sortField.title"><![CDATA[Título]]></item>
 		<item name="gallery.image.sortField.uploadTime"><![CDATA[Fecha de subida]]></item>
 		<item name="gallery.image.sortField.views"><![CDATA[Visitas]]></item>
@@ -339,7 +338,6 @@
 		<item name="gallery.image.condition.displayMode.masonry"><![CDATA[Mampostería]]></item>
 		<item name="gallery.image.boxList.description.views"><![CDATA[{#$image->views} visita{if $image->views != 1}s{/if}]]></item>
 		<item name="gallery.image.boxList.description.comments"><![CDATA[{#$image->comments} comentario{if $image->comments != 1}s{/if}]]></item>
-		<item name="gallery.image.boxList.description.cumulativeLikes"><![CDATA[{include file='__topReaction' cachedReactions=$image->cachedReactions render='full'}]]></item>
 		<item name="gallery.image.boxList.description.favorites"><![CDATA[Favoritos: {#$image->favorites}]]></item>
 		<item name="gallery.image.comments.label"><![CDATA[{#$comments} comentario{if $comments != 1}s{/if}]]></item>
 		<item name="gallery.image.views.label"><![CDATA[{#$views} visita{if $views != 1}s{/if}]]></item>
@@ -347,14 +345,14 @@
 	<category name="gallery.index">
 		<item name="gallery.index.stats"><![CDATA[Estadísticas]]></item>
 		<item name="gallery.index.stats.detail"><![CDATA[<ul class="inlineList dotSeparated">
-<li>{plural value=$stats[authors] 1='1 autor' other='# autores'}</li>
-<li>{plural value=$stats[albums] 1='1 álbum' other='# álbumes'}</li>
-<li>{plural value=$stats[images] 1='1 imagen' other='# imágenes'}{if $stats[imagesPerDay]} ({plural value=$stats[imagesPerDay] 1='1 imagen' other='# imágenes'} por día){/if}</li>
+<li>{plural value=$galleryStats->authors 1='1 autor' other='# autores'}</li>
+<li>{plural value=$galleryStats->albums 1='1 álbum' other='# álbumes'}</li>
+<li>{plural value=$galleryStats->images 1='1 imagen' other='# imágenes'}{if $galleryStats->imagesPerDay} ({plural value=$galleryStats->imagesPerDay 1='1 imagen' other='# imágenes'} por día){/if}</li>
 {if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS}
-	<li>{plural value=$stats[videos] 1='1 vídeo' other='# vídeos'}{if $stats[videosPerDay]} ({plural value=$stats[videosPerDay] 1='1 vídeo' other='# vídeos'} por día){/if}</li>
+	<li>{plural value=$galleryStats->videos 1='1 vídeo' other='# vídeos'}{if $galleryStats->videosPerDay} ({plural value=$galleryStats->videosPerDay 1='1 vídeo' other='# vídeos'} por día){/if}</li>
 {/if}
-<li>Tamaño total de archivos {$stats[size]|filesize}</li>
-<li>{plural value=$stats[comments] 1='1 comentario' other='# comentarios'}</li>
+<li>Tamaño total de archivos {$galleryStats->filesize|filesize}</li>
+<li>{plural value=$galleryStats->comments 1='1 comentario' other='# comentarios'}</li>
 </ul>]]></item>
 	</category>
 	<category name="gallery.video">
@@ -661,8 +659,6 @@ Make sure that there are no whitespaces before and after the actual client ident
 		<item name="wcf.user.activityPoint.objectType.com.woltlab.gallery.activityPointEvent.videoLink"><![CDATA[Enlaces de vídeos]]></item>
 		<item name="wcf.user.boxList.description.galleryImages"><![CDATA[{#$boxUser->galleryImages} {if $boxUser->galleryImages == 1}imagen{else}imágenes{/if}]]></item>
 		<item name="wcf.user.boxList.description.galleryVideos"><![CDATA[{#$boxUser->galleryVideos} {if $boxUser->galleryVideos == 1}vídeo{else}vídeos{/if}]]></item>
-		<item name="wcf.user.sortField.galleryImages"><![CDATA[Imágenes]]></item>
-		<item name="wcf.user.sortField.galleryVideos"><![CDATA[Vídeos]]></item>
 	</category>
 	<category name="wcf.user.condition">
 		<item name="wcf.user.condition.galleryImages"><![CDATA[Imágenes]]></item>
