@@ -666,15 +666,15 @@ Make sure that there are no whitespaces before and after the actual client ident
 	</category>
 	<category name="wcf.user.notification">
 		<item name="wcf.user.notification.com.woltlab.gallery"><![CDATA[Galería]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.image.image"><![CDATA[Notificarme nuevas imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if} en categorías suscritas]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.image.mention"><![CDATA[Notificarme cuando me mencionen]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.notification.comment"><![CDATA[Notificarme nuevos comentarios en mis imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.notification.commentResponse"><![CDATA[Notificarme nuevas respuestas a mis comentarios]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.notification.commentResponseOwner"><![CDATA[Notificarme nuevas respuestas a comentarios sobre mis imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.likeableImage.notification.like"><![CDATA[Notificarme cuando alguien reaccione a mis imágenes{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeos{/if}]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.like.notification.like"><![CDATA[Notificarme cuando alguien reaccione a mis comentarios]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.like.notification.like"><![CDATA[Notificarme cuando alguien reaccione a mis respuestas a comentarios]]></item>
-		<item name="wcf.user.notification.com.woltlab.gallery.image.marker"><![CDATA[Notificarme cuando me marquen en imágenes]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.image.image"><![CDATA[Nueva imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeo{/if} en categoría suscrita]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.image.mention"><![CDATA[Has sido mencionado]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.notification.comment"><![CDATA[Nuevo comentario en tu imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeo{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.notification.commentResponse"><![CDATA[Nueva respuesta a tu comentario]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.notification.commentResponseOwner"><![CDATA[Nueva respuesta a un comentario en tu imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeo{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.likeableImage.notification.like"><![CDATA[Reacción a tu imagen{if GALLERY_VIDEO_UPLOAD || GALLERY_VIDEO_LINKS} o vídeo{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.like.notification.like"><![CDATA[Reacción a tu comentario]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.imageComment.response.like.notification.like"><![CDATA[Reacción a tu respuesta a un comentario]]></item>
+		<item name="wcf.user.notification.com.woltlab.gallery.image.marker"><![CDATA[Has sido etiquetado en una imagen]]></item>
 	</category>
 	<category name="wcf.user.profile">
 		<item name="wcf.user.profile.menu.albums"><![CDATA[Álbumes]]></item>
